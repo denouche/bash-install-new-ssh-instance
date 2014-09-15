@@ -20,7 +20,7 @@ echo 'AllowUsers ' >> /etc/ssh/sshd_config-$suffix
 ln -s /usr/sbin/sshd /usr/sbin/sshd-$suffix
 
 # Copy launch executable
-cp /etc/init.d/ssh /etc/init.d/ssh-suffix
+cp /etc/init.d/ssh /etc/init.d/ssh-$suffix
 sed -r -i "s/(#\s+Provides:\s+sshd)/\1-$suffix/g" /etc/init.d/ssh-$suffix
 sed -r -i "s/(\/usr\/sbin\/sshd)/\1-$suffix/g" /etc/init.d/ssh-$suffix
 sed -r -i "s/(\/var\/run\/sshd)\.pid/\1-$suffix.pid/g" /etc/init.d/ssh-$suffix
