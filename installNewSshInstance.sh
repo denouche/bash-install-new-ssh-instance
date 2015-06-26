@@ -3,7 +3,7 @@ echo "On which port the new ssh instance have to listen to ?"
 read port
 
 # Ask ssh suffix
-echo "Choose a prefix for new files (ex: if you choose 'external', the new process will be called 'ssh-external')"
+echo "Choose a suffix for new files (ex: if you choose 'external', the new process will be called 'ssh-external')"
 read suffix
 
 # Copy configuration file
